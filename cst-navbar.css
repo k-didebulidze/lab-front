@@ -1,0 +1,67 @@
+@media (max-width: 1023px) {
+              .navbar-toggleable-cst .navbar-nav .dropdown-menu {
+                position: static;
+                float: none;
+              }
+              .navbar-toggleable-cst > .container {
+                padding-right: 0;
+                padding-left: 0;
+              }
+                
+              .icon img{
+                  border-right: none !important;
+              }
+            }
+
+            @media (min-width: 1024px) {
+              .navbar-toggleable-cst {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+                -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                        flex-wrap: nowrap;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+              }
+              .navbar-toggleable-cst .navbar-nav {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: row;
+                    -ms-flex-direction: row;
+                        flex-direction: row;
+              }
+              .navbar-toggleable-cst .navbar-nav .nav-link {
+                padding-right: .5rem;
+                padding-left: .5rem;
+              }
+              .navbar-toggleable-cst > .container {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: nowrap;
+                    -ms-flex-wrap: nowrap;
+                        flex-wrap: nowrap;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+              }
+              .navbar-toggleable-cst .navbar-collapse {
+                display: -webkit-box !important;
+                display: -webkit-flex !important;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                width: 100%;
+              }
+              .navbar-toggleable-cst .navbar-toggler {
+                display: none;
+              }
+            }
+          
+          

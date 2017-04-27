@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      
+      <title>Web Desktop HTML</title>
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      
+    <link rel="stylesheet" type="text/css" href="cst-navbar.css">
+      
+      <style type="text/css"> 
+          
+          @font-face{
+              font-family: Roboto-Regular;
+              src: url(web_html/fonts/Roboto-Regular.ttf)
+          }
+      
+          body{
+              font-family: Roboto-Regular;
+              margin: 0;
+              padding: 0;
+          }
+          
+          #logo{
+              width: 100px;
+              margin-right: 50px;
+          }
+          
+          .nav-link{
+              color: #3D58A6 !important;
+          }
+          
+          .navPartRight {
+              float: right !important;
+              margin-right: 0;
+          }
+          
+          .active{
+              opacity: 0.5 !important;
+          }
+          
+          .icon img{
+              width: 60px;
+              padding: 0 10px 0 10px;
+              border-right: 1px solid #3D58A6;
+          }
+          
+          .nav-link:hover{
+              opacity: 0.5;
+          }
+          
+          .icon:hover{
+              opacity: 0.5;
+          }
+          
+          #searchIcon img{
+              border-right: none !important;
+          }
+          
+          #html{
+              background-color: #E6E6E6;
+              height: 460px;
+              width: 100%;
+              padding: 30px;
+          }
+          
+          #html p{
+              font-weight: bold;
+          }
+          
+          .title{
+              padding: 30px 0;
+          }
+          
+          .titleLink{
+              font-size: 20px;
+          }
+          
+          #videosa{
+              color: white;
+          }
+          
+          #videosa a{
+              color: white;
+          }
+          
+          #newsa{
+              color: #363E97;
+          }
+          
+          #newsa a{
+              color: #363E97;
+          }
+          
+          #featureda{
+              color: black;
+          }
+          
+          #featureda a{
+              color: black;
+          }
+          
+          .linkRed:hover{
+              text-decoration: none !important;
+              color: red !important;
+          }
+          
+          .iframe{
+              width: 540px;
+              height: 315px;
+              background-color: white;
+              text-align: center;
+              display: table-cell;
+              vertical-align: middle;
+          }
+          
+          .borderRed:hover{
+              border: 3px solid red;
+          }
+          
+          #videos{
+              background-color: #363E97;
+              padding-bottom: 56px;
+          }
+          
+          @media (max-width: 1024px){
+              #videos{
+                  display: none !important;
+              }
+          }
+          
+          @media (max-width: 1024px){
+              #design{
+                  display: none !important;
+              }
+          }
+          
+          #news{
+              background-color: #BDCCD4;
+              padding-bottom: 56px;
+          }
+          
+          .card{
+              margin-bottom: 25px;
+              position: relative;
+          }
+          
+          .card img{
+              width: 100%;
+          }
+          
+          #featured{
+              background-color: #E6E6E6;
+              padding-bottom: 30px;
+          }
+          
+          .col{
+              margin-bottom: 15px;
+          }
+          
+          .featuredMedia{
+              background-color: white;
+              padding: 15px;
+              color: #3D58A6;
+              height: 100%;
+          }
+          
+          .featuredContent img{
+              float: left;
+          }
+          
+          .featuredText{
+              width: 300px;
+              float: right;
+          }
+          
+          .featuredText p{
+              text-align: right;
+          }
+          
+          .featuredText a{
+              float: right;
+          }
+          
+          #bottomLeft{
+              float: left;
+          }
+          
+          #bottomRight{
+              float: right;
+          }
+          
+          #bottombar{
+              font-size: 12px;
+              font-weight: bold;
+              padding: 20px 0;
+              height: 60px;
+          }
+          
+          .carousel-caption{
+              left: 30px !important;
+              right: inherit !important;
+              text-align: left !important;
+          }
+          
+          .carousel-item {
+              background-image: url(web_html/img/banner.jpg);
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 400px;
+          }
+          
+          .carousel-control-prev-icon {
+              background-image: url("web_html/logos/larrow.png") !important;
+              width: 50px;
+              height: 50px;
+          }
+
+            .carousel-control-next-icon {
+              background-image: url("web_html/logos/rarrow.png") !important;
+              width: 50px;
+              height: 50px;
+          }
+          
+          .cardHover{
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 90%;
+              background-color: white;
+              opacity: 0.7;
+              display: none;
+          }
+          
+          .hover-read{
+              position: absolute;
+              bottom: 0px;
+              right: 10px;
+              color: #3D58A6;
+              font-weight: bold;
+          }
+          
+          .hover-read:hover{
+              text-decoration: none;
+              color: #3D58A6;
+          }
+          
+          .hover-title {
+	          color: #3D58A6;
+              margin-left: 20px;
+              margin-top: 20px;
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5;
+          }
+          
+          .w-100{
+              display: none;
+          }
+          
+          @media(max-width: 1024px){
+              .w-100 {
+	               display: block;
+              }
+          }
+          
+          @media(max-width: 540px){
+              .featuredText{
+                  width: inherit;
+              }
+              
+              #html{
+                  padding: 30px 0;
+              }
+          }
+          
+          #fade{
+              position: absolute;
+              left: 15px;
+              top: 15px;
+              opacity: 0.7;
+              background-color: #EE4036;
+              z-index: 100;
+          }
+          
+          #xbutton{
+              float: right;
+              width: 100px;
+              height: 100px;
+              border: none;
+              background-color: transparent;
+              margin-right: 10px;
+          }
+          
+          #x{
+              width: 100px;
+              height: 100px;
+          }
+          
+          #fade form{
+              position: absolute;
+              top: 200px;
+              left: 50px;
+          }
+          
+          #input{
+              font-size: 80px;
+              border: none;
+              background-color: transparent;
+              outline: none;
+          }
+          
+          #search-title{
+              float: left;
+          }
+          
+          @media(max-width: 576px){
+              
+              #bottomRight{
+                  float:none;
+                  text-align: center;
+              }
+              #bottomLeft{
+                  float: none;
+                  text-align: center;
+              }
+          }
+          
+          @media(max-width:1024px){
+              #searchIcon{
+                  position: absolute;
+                  right: 5rem;
+              }
+          }
+          
+          @media (max-width:576px){
+              
+              li.nav-item{
+                  text-align: center !important;
+                  font-size: 2rem;
+              }
+                            
+              .icon img{
+                  width: 100px !important;
+                  border-right: none;
+              }
+              
+              #searchIcon img{
+	               width: 60px !important;
+                  padding: 0 10px;
+              }
+          } 
+          
+          
+      
+      </style>
+  </head>
+  <body>
+    
+      <div id="topbar">
+      
+        <div class="container">
+          
+            <nav class="navbar  navbar-toggleable-cst navbar-light">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                
+                <img id="logo" src="web_html/svg/logo.svg">  
+              </a>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="news.html">NEWS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="about.html">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="contact.html">CONTACT</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class="nav-item navPartRight" >
+                      <a class="icon" href="https://plus.google.com/"><img src="web_html/logos/g+.png"></a>
+                    </li>
+                    <li class="nav-item navPartRight">
+                        <a class="icon" href="https://www.facebook.com/"><img src="web_html/logos/fb.png"></a>
+                    </li>    
+                    <li class="nav-item navPartRight">
+                        <a class="icon" href="https://www.youtube.com/"><img src="web_html/logos/yt.png"></a>
+                    </li>   
+                </ul>
+              </div>
+                <a  class="icon"  id="searchIcon"><img src="web_html/logos/search.png"></a>
+            </nav>  
+        </div>
+      </div>
+      
+      <div id="html">
+      
+        
+        <div class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="carousel-caption d-md-block">
+                    <p>THINGS AREN'T ALWAYS<br>#000000<br>OR<br>#FFFFFF</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-md-block">
+                    <p>THINGS AREN'T ALWAYS<br>#000000<br>OR<br>#FFFFFF</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-md-block">
+                    <p>THINGS AREN'T ALWAYS<br>#000000<br>OR<br>#FFFFFF</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </div>
+        
+      </div>
+      
+      <div id="videos">
+      
+        <div class="container">
+          
+            <div class="title">
+            
+                <p class="titleLink" id="videosa">VIDEOS | <a href="" class="linkRed" >view all videos</a></p>
+            </div>
+            
+            <div class="content row">
+            
+                <div class="col">
+                
+                    <div class="iframe borderRed"><p>EMBED YOUTUBE VIDEO GOES HERE</p></div>
+                </div>
+                
+                <div class="col">
+                
+                    <div class="iframe borderRed"><p>EMBED YOUTUBE VIDEO GOES HERE</p></div>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+      <div id="news">
+      
+        <div class="container">
+            
+            <div class="title">
+            
+                <p class="titleLink" id="newsa">NEWS | <a href="news.html" class="linkRed">view all news</a></p>
+            </div>
+            
+            <div class="card-deck">
+              <div class="card">
+                  <div class="cardHover">
+                      <p class="hover-title"></p>
+                      <a href="news/typography.html" class="hover-read">read more</p>
+                  </div>
+                <a href="news/typography.html"><img class="card-img-top" src="web_html/img/typography.jpg" alt="Card image cap"></a>
+                <div class="card-block">
+                  <p class="card-text">TYPOGRAPHY LAB</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="cardHover">
+                      <p class="hover-title"></p>
+                      <a href="news/marketing.html" class="hover-read">read more</p>
+                </div>
+                <a href="news/marketing.html"><img class="card-img-top" src="web_html/img/online_marketing.jpg" alt="Card image cap"></a>
+                <div class="card-block">
+                  <p class="card-text">ONLINE MARKETING</p>
+                  
+                </div>
+              </div>
+              <div class="card">
+                <div class="cardHover">
+                      <p class="hover-title"></p>
+                      <a href="news/coding.html" class="hover-read">read more</p>
+                </div>
+                <a href="news/coding.html"><img class="card-img-top" src="web_html/img/coding.jpg" alt="Card image cap"></a>
+                <div class="card-block">
+                  <p class="card-text">C# CODING</p>
+                </div>
+              </div>
+              <div class="card" id="design">
+                <div class="cardHover">
+                      <p class="hover-title"></p>
+                      <a href="news/design.html" class="hover-read">read more</p>
+                </div>
+                <a href="news/design.html"><img class="card-img-top" src="web_html/img/design.jpg" alt="Card image cap"></a>
+                <div class="card-block">
+                  <p class="card-text">INTERFACE DESIGN</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <div id="featured">
+      
+        <div class="container">
+          
+            <div class="title">
+            
+                <p class="titleLink" id="featureda">FEATURED | <a href="" class="linkRed">view all featured media</a></p>
+            </div> 
+            
+            <div class="content row">
+            
+                <div class="col">
+                
+                    <div class="featuredMedia borderRed">
+                    
+                        <div class="featuredTitle">
+                        
+                            <a href="" class="linkRed " >RESPONSIVE WEB  DESIGN</a>
+                        </div>
+                        
+                        <div class="featuredContent">
+                        
+                            <img src="web_html/logos/responsive.png">
+                            <div class="featuredText">
+                                <p>APPROACH THAT SUGGESTS THAT DESIGN AND DEVELOPMENT SOULD RESPOND TO THE USER'S BEAHVIOR AND ANVIRONMENT BASED ON SCREEN SIZE, PLATFORM AND ORIENTATION.</p>
+                                
+                                <a href="" class="linkRed">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-100"></div>
+                
+                <div class="col">
+                
+                    <div class="featuredMedia borderRed">
+                        
+                         <div class="featuredTitle">
+                        
+                            <a href="" class="linkRed">APP DEVELOPMENT</a>
+                        </div>
+                    
+                        <div class="featuredContent">
+                        
+                            <img src="web_html/logos/mobile.png">
+                            <div class="featuredText">
+                                <p>MOBILE APPLICATION DEVELOPMENT IS THE PROCESS OF MAKING OR CREATING A MOBILE APPLICATION TO RUN ON VARIOUS MOBILE PLATFORMS. A MOBILE PLATFORM OS A MOBILE OPERATING SYSTEM</p>
+                                
+                                <a href="" class="linkRed">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div id="bottombar">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm col-lg col-md">
+                <p id="bottomLeft" >&copy;2017 hyper text markup language</p>
+            </div>
+            <div class="col-12 col-sm col-lg col-md">
+                <p id="bottomRight" >created by:ME</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+      
+      <div id="fade" class="col">
+    
+        <button id="xbutton"><img id="x" src="web_html/logos/x.png"></button>
+            <form>
+                <h2 id="search-title" >search by typing</h2>
+                <input class="col" id="input" type="text" autofocus>
+            </form>
+    </div>
+      
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+      
+      <script type="text/javascript">
+      
+        $(function(){
+            $(".carousel-control-next").hide();
+            $(".carousel-control-prev").hide();
+        })
+        
+        $(".carousel").mouseover(function(){
+            $(".carousel-control-next").show();
+            $(".carousel-control-prev").show();
+        })
+        
+        $(".carousel").mouseleave(function(){
+            $(".carousel-control-next").hide();
+            $(".carousel-control-prev").hide();
+        })
+        
+        $(".card").mouseover(function(){
+            $(this).children(".cardHover").css("display", "block");
+            var cardText = $(this).children(".card-block").children(".card-text").html();
+            $(this).children(".cardHover").children(".hover-title").html(cardText);
+            $(this).children(".card-block").children(".card-text").css("display", "none");
+            $(this).children(".card-block").css("height", "64px");
+        });
+          
+        $(".card").mouseleave(function(){
+            $(this).children(".cardHover").css("display", "none");
+            $(this).children(".card-block").children(".card-text").css("display", "block");
+        })
+        
+        $(function(){
+               var winW = $(window).width();
+              var winH = $(document).height();
+              $("#fade").css("width", winW-30);
+              $("#fade").css("height", winH-30);
+          })
+          
+          $(function(){
+              $("#fade").hide();
+          })          
+          
+          $("#searchIcon").click(function(){
+              $("#fade").show();
+              $("#input").focus();
+          })
+          
+          $("#x").click(function(){
+              $("#fade").hide();
+          })
+      
+      </script>
+      
+  </body>
+</html>
